@@ -7,3 +7,9 @@
 * Global configuration file for options
 * Necessary loggings including failure list for possible tr-try mechanism
 * Unit Test
+
+### TODO
+* BFS implementation
+* High-avaliablility of the cocurrent pool
+* Test coverage
+* Better off on the presentation of results
