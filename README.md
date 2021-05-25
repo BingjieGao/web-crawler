@@ -8,6 +8,9 @@
 * Necessary loggings including failure list for possible tr-try mechanism
 * Unit Test
 
+### Issues
+* Encountered with 420 too many requests applied single-thread aync functions - cocurrent API call controlled
+
 ### TODO
 * BFS implementation
 * High-avaliablility of the cocurrent pool
