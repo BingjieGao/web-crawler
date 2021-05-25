@@ -55,4 +55,8 @@ export default class ConcurrentPool {
             }
         })
     }
+
+    public getCocurrentCount = () => {
+        return this._concurrent_number;
+    }
 }

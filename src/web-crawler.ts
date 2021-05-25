@@ -4,7 +4,7 @@ import { AxiosResponse } from "axios";
 import cheerio from "cheerio";
 import {_sanitize_string as sanitizer, fetchURLHTML, trimText, checkVisited } from "./utility";
 import { logger } from "./logger";
-import CocurrentPool from "./concurrent-pool";
+import CocurrentPool from "./cocurrent-pool";
 import { getMapper, getMapperLength, getVisited, setMapper, setVisitedUrl } from "./constants";
 
 var hostMatcher = /^((http[s]?\:\/\/)?(([a-z]{2,10}\.)*([a-z]{2,30}(\.))(([a-z]{2,2}(\.)))?([a-z]{2,6})))+(([\/]+[\w-\?\=\.]{1,}[\/]?)*)$/
