@@ -2,12 +2,12 @@
   "name": "webcrawler",
   "version": "0.0.1",
   "description": "Monzo web crawler ",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "test": "mocha -r ts-node/register __tests__/**/*.test.ts",
     "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test",
     "build": "tsc",
-    "start": "tsc && node dist/index.js"
+    "start": "tsc && node dist/src/index.js"
   },
   "author": "bigao",
   "license": "ISC",

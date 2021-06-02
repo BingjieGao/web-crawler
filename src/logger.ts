@@ -50,7 +50,7 @@ Log4js.addLayout("json", function() {
         } catch (err) {
             Object.assign(data, { message: logEvent.data.join() });
         } finally {
-            console.log((omit("function", data)));
+            //console.log((omit("function", data)));
             return JSON.stringify({
                 "start-time": `${logReflector(logEvent["startTime"])}`,
                 logname: `${logReflector(logEvent["categoryName"])}`,

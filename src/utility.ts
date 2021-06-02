@@ -14,17 +14,16 @@ export const omit = (key, obj) => {
 }
 
 export const fetchURLHTML = (currentURL: string) => {
-    return new Promise((resolve, reject) => {
-        console.log(`requesting url with ${currentURL}`)
-        axios.get(currentURL)
+    //return new Promise((resolve, reject) => {
+        //  url with ${currentURL}`)
+        return axios.get(currentURL)
             .then((response: AxiosResponse) => {
-                resolve(response);
+                return response;
             })
             .catch((error: AxiosError) => {
-                console.log(error)
-                reject(error);
+                return Promise.reject(error);
             })
-    })
+   // })
 }
 export const generateSetKey = (urlString: string) => {
     if(urlString) {

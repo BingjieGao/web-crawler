@@ -1,18 +1,32 @@
 "use strict"
 
+import { fetchURLHTML } from "./utility";
 import WebCrawler from "./web-crawler";
 
 const crawlerInstance = new WebCrawler({
     seedURL: "https://monzo.com",
-    maxPageNum: 10,
-    maxDepth: 2
+    maxPageNum: 100,
+    maxDepth: 10
 });
 
-crawlerInstance.depthFirstTraversal(0)
-    .then((results) => {
+// fetchURLHTML("https://stackoverflowstack.com/&absdkasj")
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   })
+
+try {
+    crawlerInstance.depthFirstTraversal(0)
+      .then((results) => {
         console.log(results);
-    })
-    .catch((error) => {
+      })
+      .catch((error) => {
+        console.log("Caught error from index file")
         console.log(error);
-        process.exit(1);
-    })
+        return Promise.reject(error);
+    });
+} catch(error) {
+    console.log(error)
+}
