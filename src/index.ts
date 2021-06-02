@@ -17,7 +17,7 @@ const crawlerInstance = new WebCrawler({
 //     console.log(error);
 //   })
 
-try {
+// try {
     crawlerInstance.depthFirstTraversal(0)
       .then((results) => {
         console.log(results);
@@ -25,8 +25,8 @@ try {
       .catch((error) => {
         console.log("Caught error from index file")
         console.log(error);
-        return Promise.reject(error);
+        // return Promise.reject(error);
     });
-} catch(error) {
-    console.log(error)
-}
+// } catch(error) {
+//     console.log(error)
+// }

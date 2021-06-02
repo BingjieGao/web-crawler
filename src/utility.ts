@@ -2,6 +2,7 @@ import md5 from "md5";
 
 import axios, { AxiosError, AxiosResponse } from "axios";
 import { IURLObj } from "./interface";
+import AxiosInstance from "./axios-instance";
 
 
 export const _sanitize_string = (originalString: string) => {
@@ -16,7 +17,7 @@ export const omit = (key, obj) => {
 export const fetchURLHTML = (currentURL: string) => {
     //return new Promise((resolve, reject) => {
         //  url with ${currentURL}`)
-        return axios.get(currentURL)
+        return AxiosInstance.get(currentURL)
             .then((response: AxiosResponse) => {
                 return response;
             })
